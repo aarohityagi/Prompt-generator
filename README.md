@@ -3,8 +3,6 @@
 ## Overview
 This project is an **LLM-based Advanced Prompt Generator** that automates prompt engineering by enhancing a given input prompt using large language models (LLMs). Following established prompt engineering principles, the tool turns a short, vague prompt into an advanced, well-structured one with a single click, using LLM agents for optimized prompt generation.
 
-> Based on the open-source project [Advanced-Prompt-Generator](https://github.com/Thunderhead-exe/Advanced-Prompt-Generator) by Thunderhead-exe. This version is trimmed down to focus on the code and the pipeline logic, with the Docker/FastAPI deployment removed.
-
 ## Key Features
 - **Automated Prompt Engineering:** AI agent based prompt engineering process, requiring minimal user input.
 - **Uses OpenAI APIs:** Support for gpt-4o or gpt-4o-mini (gpt-4o-mini recommended).
@@ -199,10 +197,3 @@ The Fibonacci spiral should start with the first few Fibonacci numbers and visua
    ```
 ---
 
-## Acknowledgements
-This project is based on [Advanced-Prompt-Generator](https://github.com/Thunderhead-exe/Advanced-Prompt-Generator) by Thunderhead-exe. See the [LICENSE](LICENSE) file for the license terms.
-
----
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bug reports, feature requests, or general feedback.
