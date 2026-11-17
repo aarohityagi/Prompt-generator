@@ -1,56 +1,35 @@
-# Advanced Prompt Generator
+Advanced Prompt Generator
+Overview
 
-![Banner Image Placeholder](media/Banner.jpg)
+This project is an LLM-based Advanced Prompt Generator that automates prompt engineering by enhancing a given input prompt using large language models (LLMs). Following established prompt engineering principles, the tool turns a short, vague prompt into an advanced, well-structured one with a single click, using LLM agents for optimized prompt generation.
 
-## Overview
-This project is an **LLM-based Advanced Prompt Generator** designed to automate the process of prompt engineering by enhancing given input prompts using large language models (LLMs). Following established prompt engineering principles, the tool can generate advanced prompts with a simple click, leveraging LLM agents for optimized prompt generation.
+Key Features
+Automated Prompt Engineering: AI agent based prompt engineering process, requiring minimal user input.
+Uses OpenAI APIs: Support for gpt-4o or gpt-4o-mini (gpt-4o-mini recommended).
+Gradio Interface: An easy-to-use interface for testing the prompt generation.
+Local Script: Run the pipeline directly from the command line.
+Why Is This Not Deployed?
 
-You can demo this solution on [Hugging Face Spaces](https://huggingface.co/spaces/Adam-Ben-Khalifa/Advanced_Prompt_Generator).
+This repository is a code-focused showcase and is intentionally not hosted as a public demo. Each prompt triggers several OpenAI API calls, and a public demo would run on a single API key, exposing it to abuse and putting the cost of every visitor's usage on the owner. The tool is designed to run locally with your own API key.
 
-Also you can check this [Medium article](https://medium.com/@AdamBenKhalifa/an-ai-agent-to-replace-prompt-engineers-ed2864e23549) about this solution for more details!
-
-## Key Features
-- **Automated Prompt Engineering:** AI Agent based prompt engineering processes, requiring minimal user input.
-- **Uses OpenAI APIs:** Support for gpt-4o or gpt-4o-mini (we recommend gpt-4o-mini).
-- **FastAPI & Docker Deployment:** Ensures efficient and scalable backend deployment.
-- **Gradio Interface:** Provides an easy-to-use interface for testing the prompt generation.
-- **Hugging Face Integration:** Hosted on Hugging Face Spaces for quck demo.
-
-## Next Steps
-- **Expand Model Support:** Integrate additional models to offer more variety and flexibility.
-
----
-
-## Repo Structure
-
-```
+Next Steps
+Expand Model Support: Integrate additional models to offer more variety and flexibility.
+Optional Hosted Demo: Let users bring their own API key.
+Repo Structure
 ├── .gitignore                     # Files and directories to be ignored by Git
 ├── LICENSE                        # License information for the project
 ├── README.md                      # Project documentation (this file)
-├── Advancd_Prompt_Generator.py    # Script to test the tool locally 
+├── Advanced_Prompt_Generator.py   # Script to test the tool locally
+├── app.py                         # Gradio interface
 ├── pipeline.py                    # Core logic for prompt enhancement
 ├── requirements.txt               # Python dependencies for the project
-├── Docker-FastAPI-app             # Version deployed with FastAPI & Docker
-│   ├── app       
-│   │   ├── main.py       
-│   │   ├── pipeline.py   
-│   ├── Dockerfile        
-│   ├── requirements.txt  
-├── Gradio-app                     # Version deployed with Gradio 
-│   ├── app.py            
-│   ├── pipeline.py       
-│   ├── requirements.txt  
-```
-
----
-
-## Results Examples
-## ***Example 1***
-```
+├── media                          # Diagrams used in this README
+│   ├── D1.png
+│   ├── D2.png
+Results Examples
+Example 1
 >>> Input Prompt:
 how to write a book?
-```
-```
 >>> Enhanced Prompt:
 As a knowledgeable writing coach, please provide a comprehensive guide on how to write a book.
 
@@ -107,15 +86,11 @@ Keep the response medium in length (approximately 200-300 words) to ensure thoro
 - **Description**: Suggest resources for further learning about writing techniques and publishing options.
 - **Reasoning**: Providing additional resources empowers authors to deepen their knowledge and explore various publishing avenues.
 - **Success criteria**: List reputable books, websites, and courses that cover writing skills and the publishing process, ensuring they are accessible and relevant to aspiring authors.
-```
-## ***Example 2***
-```
+Example 2
 >>> Input Prompt:
 write a python script to compute and plot the fibonacci spiral
-```
-```
 >>> Enhanced Prompt:
-As a programming expert, please create a Python script that computes and plots the Fibonacci spiral. 
+As a programming expert, please create a Python script that computes and plots the Fibonacci spiral.
 
 Requirements:
 - Use the Fibonacci sequence to generate the necessary points for the spiral.
@@ -167,61 +142,30 @@ The Fibonacci spiral should start with the first few Fibonacci numbers and visua
 - **Description**: Provide example usage demonstrating the script in action, including a plot display.
 - **Reasoning**: Example usage helps users understand how to implement and run the script, showcasing its functionality and output.
 - **Success criteria**: The example should include a clear demonstration of how to call the functions, specify the number of terms, and display the resulting plot, with expected output shown.
-```
----
+Solution Diagrams
 
-## Solution Diagrams
-![Solution Architecture Diagram](media/D2.png)
-![Solution Workflow Diagram](media/D1.png)
+Solution Architecture Diagram Solution Workflow Diagram
 
----
+Getting Started
+Installation
+Clone the repository:
+bash
+git clone https://github.com/aarohityagi/Prompt-generator.git
+cd Prompt-generator
+Install the dependencies:
+bash
+pip install -r requirements.txt
+Set your OpenAI API key:
+bash
+# Windows (PowerShell)
+$env:OPENAI_API_KEY="your-key-here"
 
-## Gradio Interface
-![Gradio Interface Image 1](media/G1.png)
----
+# macOS / Linux
+export OPENAI_API_KEY="your-key-here"
+Run the app:
+bash
+# Gradio interface
+python app.py
 
-## Getting Started
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Thunderhead-exe/Advanced-Prompt-Generator.git
-   ```
-2. Install the dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the app:
-   ```bash
-   python3 Advancd_Prompt_Generator.py
-   ```
----
-
-<div align="center">
-<!--
-<picture>
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=thunderhead-exe/advanced-prompt-generator&type=Date&theme=dark" />
-</picture>
--->                      
-  
-## Star History
-
-<a href="https://www.star-history.com/#Thunderhead-exe/Advanced-Prompt-Generator&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Thunderhead-exe/Advanced-Prompt-Generator&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Thunderhead-exe/Advanced-Prompt-Generator&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Thunderhead-exe/Advanced-Prompt-Generator&type=Date" />
- </picture>
-</a>
-
----
-
-<div align="left">
-
-## License
-This project is licensed under the terms of the [apache-2.0 License](LICENSE).
-
----
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bug reports, feature requests, or general feedback.
+# Or the local script
+python Advanced_Prompt_Generator.py
